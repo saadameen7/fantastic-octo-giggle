@@ -2,106 +2,265 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Site Under Construction</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e1b4b);
-      color: white;
-      text-align: center;
-    }
-    .card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 1.5rem;
-      padding: 2rem;
-      max-width: 500px;
-      width: 90%;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-    }
-    .card h1 {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-    }
-    .card p {
-      font-size: 0.95rem;
-      color: #d1d5db;
-    }
-    .progress {
-      margin: 1.5rem 0;
-      height: 10px;
-      border-radius: 6px;
-      background: rgba(255,255,255,0.1);
-      overflow: hidden;
-    }
-    .progress-bar {
-      height: 100%;
-      width: 70%;
-      background: linear-gradient(90deg, #6366f1, #d946ef, #ec4899);
-      animation: loading 2s ease-out;
-    }
-    @keyframes loading {
-      from { width: 0; }
-      to { width: 70%; }
-    }
-    form {
-      display: flex;
-      margin-top: 1rem;
-    }
-    input[type="email"] {
-      flex: 1;
-      padding: 0.6rem;
-      border: none;
-      border-radius: 0.6rem 0 0 0.6rem;
-      outline: none;
-    }
-    button {
-      background: white;
-      color: #0f172a;
-      border: none;
-      padding: 0 1rem;
-      border-radius: 0 0.6rem 0.6rem 0;
-      cursor: pointer;
-      font-weight: 600;
-    }
-    button:hover {
-      opacity: 0.9;
-    }
-    .footer {
-      margin-top: 1.5rem;
-      font-size: 0.85rem;
-      color: #9ca3af;
-    }
-    .footer a {
-      color: white;
-      text-decoration: underline;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project Manager Portfolio</title>
+  <meta name="description" content="Portfolio website for a Project Manager showcasing experience, projects, and testimonials." />
+  <meta name="theme-color" content="#0f0f10" />
+  <meta property="og:title" content="Project Manager Portfolio" />
+  <meta property="og:description" content="Portfolio website for a Project Manager showcasing experience, projects, and testimonials." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="/assets/img/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="icon" href="/assets/img/favicon.ico" />
 </head>
 <body>
-  <div class="card">
-    <h1>🚧 This site is under construction</h1>
-    <p>We’re crafting something clean, fast, and delightful. Thanks for your patience!</p>
-
-    <div class="progress">
-      <div class="progress-bar"></div>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="logo">Your Name</a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+          <span class="sr-only">Toggle menu</span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul id="nav-menu" class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact" class="btn btn-primary">Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <form onsubmit="event.preventDefault(); alert('Thanks! We’ll notify you when we launch.');">
-      <input type="email" placeholder="Enter your email to get notified" required />
-      <button type="submit">Notify me</button>
-    </form>
+  <main>
+    <section class="hero section" aria-label="Hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="eyebrow">Project Management • Product Delivery • Team Leadership</p>
+          <h1>Project Manager driving impactful outcomes and predictable delivery</h1>
+          <p class="lead">I help cross-functional teams deliver complex projects on time by aligning strategy, scope, and execution.</p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="stat">
+            <span class="stat-value">$25M+</span>
+            <span class="stat-label">Budget managed</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">30+</span>
+            <span class="stat-label">Projects delivered</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">98%</span>
+            <span class="stat-label">On-time rate</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="footer">
-      Have questions or want to collaborate? <a href="mailto:hello@example.com">hello@example.com</a>
+    <section id="logos" class="logos section" aria-label="Featured clients">
+      <div class="container">
+        <ul class="logos-list">
+          <li>ACME</li>
+          <li>Globex</li>
+          <li>Umbrella</li>
+          <li>Initech</li>
+          <li>Hooli</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about" class="about section" aria-label="About">
+      <div class="container grid-2">
+        <div>
+          <h2>About</h2>
+          <p>I am a project manager focused on delivering outcomes with clarity, structure, and empathy. I blend agile and lean delivery to foster collaboration and measurable impact.</p>
+          <ul class="bullets">
+            <li>Agile and hybrid delivery models</li>
+            <li>Stakeholder alignment and governance</li>
+            <li>Risk, budget, and vendor management</li>
+          </ul>
+        </div>
+        <div class="card stats">
+          <div class="row">
+            <div class="kpi">
+              <span class="kpi-value">8+ yrs</span>
+              <span class="kpi-label">Experience</span>
+            </div>
+            <div class="kpi">
+              <span class="kpi-value">4-12</span>
+              <span class="kpi-label">Team size</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="kpi">
+              <span class="kpi-value">Enterprise</span>
+              <span class="kpi-label">Domains</span>
+            </div>
+            <div class="kpi">
+              <span class="kpi-value">PMP, CSM</span>
+              <span class="kpi-label">Certifications</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="experience section" aria-label="Experience">
+      <div class="container">
+        <h2>Experience</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <header>
+              <h3>Senior Project Manager • XYZ Corp</h3>
+              <span class="meta">2022 — Present</span>
+            </header>
+            <p>Led a multi-team program migrating legacy systems to cloud-native architecture, achieving 40% reduction in operating costs.</p>
+          </article>
+          <article class="timeline-item">
+            <header>
+              <h3>Project Manager • ABC Solutions</h3>
+              <span class="meta">2019 — 2022</span>
+            </header>
+            <p>Delivered a portfolio of B2B projects with 95% customer satisfaction, introducing risk registers and OKR alignment.</p>
+          </article>
+          <article class="timeline-item">
+            <header>
+              <h3>Associate Project Manager • Startup Co</h3>
+              <span class="meta">2016 — 2019</span>
+            </header>
+            <p>Implemented agile processes and improved velocity predictability by 30% through better backlog hygiene and forecasting.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills section" aria-label="Skills">
+      <div class="container">
+        <h2>Expertise</h2>
+        <ul class="skill-grid">
+          <li class="skill-card">Agile & Scrum</li>
+          <li class="skill-card">Roadmapping</li>
+          <li class="skill-card">Stakeholder Mgmt</li>
+          <li class="skill-card">Risk & Issue Mgmt</li>
+          <li class="skill-card">Budgeting & Forecasting</li>
+          <li class="skill-card">Vendor Management</li>
+          <li class="skill-card">Change Management</li>
+          <li class="skill-card">Data-driven Reporting</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="projects section" aria-label="Projects">
+      <div class="container">
+        <div class="section-head">
+          <h2>Projects</h2>
+          <a href="#contact" class="text-link">Request full case studies →</a>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <a class="project-media" href="#">
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" alt="Project dashboard preview" loading="lazy" />
+            </a>
+            <div class="project-content">
+              <h3>Enterprise Data Platform</h3>
+              <p>Launched a centralized data platform enabling self-serve analytics across 10 departments.</p>
+              <ul class="tags"><li>Cloud</li><li>Governance</li><li>Stakeholders</li></ul>
+            </div>
+          </article>
+          <article class="project-card">
+            <a class="project-media" href="#">
+              <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop" alt="Project collaboration" loading="lazy" />
+            </a>
+            <div class="project-content">
+              <h3>Customer Portal Modernization</h3>
+              <p>Re-platformed customer portal increasing NPS by 22 points and reducing churn by 8%.</p>
+              <ul class="tags"><li>Replatform</li><li>CX</li><li>Roadmap</li></ul>
+            </div>
+          </article>
+          <article class="project-card">
+            <a class="project-media" href="#">
+              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop" alt="Agile board" loading="lazy" />
+            </a>
+            <div class="project-content">
+              <h3>Agile at Scale</h3>
+              <p>Rolled out portfolio-level agile practices and improved time-to-market by 35%.</p>
+              <ul class="tags"><li>Agile</li><li>Coaching</li><li>OKRs</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials section" aria-label="Testimonials">
+      <div class="container">
+        <h2>Testimonials</h2>
+        <div class="testimonial-grid">
+          <blockquote class="testimonial">
+            <p>“An exceptional project leader who brings clarity and momentum to complex initiatives.”</p>
+            <footer>
+              <div class="avatar"></div>
+              <cite>VP of Engineering, XYZ Corp</cite>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p>“Consistently exceeds expectations and fosters a culture of accountability and collaboration.”</p>
+            <footer>
+              <div class="avatar"></div>
+              <cite>Director of Product, ABC Solutions</cite>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section" aria-label="Contact">
+      <div class="container grid-2">
+        <div>
+          <h2>Let’s work together</h2>
+          <p>Interested in collaborating? Reach out for consulting, contract, or full-time opportunities.</p>
+          <ul class="contact-list">
+            <li><a href="mailto:you@example.com">you@example.com</a></li>
+            <li><a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+        <form class="contact-form" name="contact" netlify>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Your Name — Project Manager</p>
+      <a href="#top" class="text-link">Back to top</a>
     </div>
-  </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
 </body>
 </html>
